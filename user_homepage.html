@@ -1,0 +1,132 @@
+<!-- 
+6 rows
+    1st row: 1 column - display box
+    2nd row: 3 columns - 3 pairs of poll
+    3rd row: 1 column - display box
+    4th row: 1 column - first recommend poll 
+    5th row: 1 column - second recommend poll 
+    6th row: 1 column - third recommend poll
+    ..........
+-->
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Pool Manager</title>
+    </head>
+
+    <body>
+        <div class="card w-75  mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">Your recent polls</h5>
+            </div>
+            <div class="card-group">
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Go team.....</h5>
+
+                        <div class="row justify-content-center">
+                            <div class="col-5">
+                                <img src="data:image/png;base64,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" class="card-img-top">
+                            </div>
+                            <div class="col-5">
+                                <img src="data:image/png;base64,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" class="card-img-top">
+                            </div>
+                        </div>
+                        
+                      </div>
+                      <a href="#" class="btn btn-primary">Check the result</a>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-body">
+                        <h5 class="card-title">Long live.....</h5>
+                        <div class="row justify-content-center">
+                            <div class="col-6">
+                                <img src="https://www.designmantic.com/blog/wp-content/uploads/2016/05/house-stark.png" class="card-img-top">
+                            </div>
+                            <div class="col-6">
+                                <img src="https://www.designmantic.com/blog/wp-content/uploads/2016/05/house-lannister.png" class="card-img-top">
+                            </div>
+                        </div>
+                      </div>
+                      <a href="#" class="btn btn-primary">Check the result</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Dinner is .....</h5>
+                            <div class="row justify-content-center">
+                                <div class="col-6">
+                                    <img src="http://www.chinatourguide.com/china_photos/beijing/dining/Beijing_Mutton_Hot_Pot_muttonwithpot.jpg" class="card-img-top">
+                                </div>
+                                <div class="col-6">
+                                    <img src="https://i.pinimg.com/originals/85/66/54/85665493e0f06567801de06255072936.jpg" class="card-img-top">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">Check the result</a>
+                    </div>
+
+                  </div>
+        </div>
+
+        <div class="card w-75 mt-5 mx-auto">
+            <div class="card-body">
+                <h5 class="card-title">Your recommended polls</h5>
+            </div>
+
+            <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Whose hairstyle should I copy</h5>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <img src="https://s3.amazonaws.com/client-data.pressly.com/Game-of-Thrones-Catch-Up-Guide-43ecf8e224dfd00d3f8b3db5c925aa45.jpg" class="card-img-top">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://i.ndtvimg.com/i/2017-07/game-of-thrones-facebook_640x480_61500365316.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Check it out!</a>
+            </div>
+
+            <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">How to choose?</h5>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <img src="https://i2.wp.com/shanghaiist.com/attachments/shang_kenneth/a-lot-of-dogs.jpg" class="card-img-top">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://s3.wp.wsu.edu/uploads/sites/2077/2018/02/kittens.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Check it out!</a>
+            </div>
+
+            <div class="card mt-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Which taste better......</h5>
+                        <div class="row justify-content-center">
+                            <div class="col-4">
+                                <img src="https://www.thealthbenefitsof.com/wp-content/uploads/2017/04/Boosting-immunity-fruit-mango.jpg" class="card-img-top">
+                            </div>
+                            <div class="col-4">
+                                <img src="https://www.thealthbenefitsof.com/wp-content/uploads/2017/04/boosting-immunity-fruit-kiwi-fruit.jpg" class="card-img-top">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Check it out!</a>
+            </div>
+        </div>
+    </body>
+    
+
+</html>
