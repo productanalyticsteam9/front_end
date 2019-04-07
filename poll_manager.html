@@ -1,12 +1,3 @@
-<!-- layout
-    grid
-container
-
-4 rows
-    1st row: 1 column - input/display box
-    2nd row: 2 columns - two picture holders
-    3rd row: 1 column - a tag bar
-    4th row: 1 column - a button -->
 <!doctype html>
 <html lang="en">
     <head>
@@ -17,17 +8,84 @@ container
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>Pool Manager</title>
+        <style>
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+                background-color: #5E4485;
+                color: #FFF;
+                padding: 1% 0;
+            }
+            .logowrapper {
+                padding-left: 25px;
+            }
+            .realnav {
+                justify-content: flex-end;
+                display: flex;
+            }
+            .navbar-expand .navbar-nav .nav-link {
+                padding: 15px 15px;
+            }
+            .navbar-expand .navbar-nav li a {
+                line-height: 20px;
+            }
+            .logo {
+                height: 40px;
+            }
+            .navbar-expand .navbar-nav .active a,
+            .navbar-expand .navbar-nav .active a:focus,
+            .navbar-expand .navbar-nav .active a:hover {
+                color: #FFF;
+            }
+            .navbar-expand .navbar-nav li a {
+                color: #9d9d9d;
+            }
+            .card {
+                -webkit-box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.75);
+                box-shadow: 0px 1px 4px 1px rgba(0,0,0,0.75);
+                padding: .25rem;
+                background-color: #fff;
+                border: 1px solid #dee2e6;
+                border-radius: .25rem;
+                margin-bottom: 20px;
+            }
+            .card:hover {
+                filter: none;
+                -webkit-filter: grayscale(0);
+            }
+        </style>
     </head>
 
     <body>
-        <div class="container">
+        <nav class="navbar navbar-expand">
+            <div class="flex-grow-1 logowrapper">
+                <a class="navbar-brand" href="#"><img class="logo" src="../img/logo.png"></a>
+            </div>
+        
+            <div class="flex-grow-1 realnav">
+
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>                
+        </nav>
+        <div class="container-fluid">
             <div class="row justify-content-center mt-4">
                 <div class="col-8">
                     <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-lg">Your poll qustion</span>
                             </div>
-                        <input type="text" class="form-control" aria-label="Your poll question" aria-describedby="inputGroup-sizing-lg">
+                        <input type="text" class="form-control" aria-label="Your poll qustion" aria-describedby="inputGroup-sizing-lg">
                     </div>
                 </div>
             </div>
@@ -54,7 +112,7 @@ container
             </div>
             <div class="row justify-content-end">
                 <div class="col-3">
-                    <input class="btn btn-primary" type="submit" value="Submit">
+                    <input class="btn btn-outline-success" type="submit" value="Submit">
                 </div>
             </div>
         </div>
